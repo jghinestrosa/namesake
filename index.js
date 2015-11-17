@@ -66,6 +66,24 @@ function namesake(path) {
     }
   }
 
+  function findOccurrences(files) {
+    var ocurrences = {};
+
+    var filenames = Object.keys(files);
+
+    filenames.forEach(function(filename) {
+      var fns = files[filename].functions;
+      fns.forEach(function(fn) {
+        if (!ocurrences[fn]) {
+          ocurrences[fn] = new Set();
+        }
+        ocurrences[fn].add(filename);
+      });
+    });
+
+    return ocurrences;
+  }
+
   async.series([
     function(callback) {
       readDirectory(path, callback);
@@ -80,6 +98,9 @@ function namesake(path) {
     if (err) {
       console.log(err);
     }
+
+    var ocurrences = findOccurrences(_files);
+
   });
 }
 
