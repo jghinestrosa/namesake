@@ -1,10 +1,17 @@
 {
   "name": "namesake",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Find namesakes throughout multiple code files",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jghinestrosa/namesake.git"
+  },
   "main": "index.js",
   "author": "Jorge García Hinestrosa",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jghinestrosa/namesake/issues"
+  },
   "dependencies": {
     "async": "^1.5.0"
   }
