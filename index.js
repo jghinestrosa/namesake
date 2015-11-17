@@ -84,6 +84,18 @@ function namesake(path) {
     return ocurrences;
   }
 
+  function printOccurrences(occurrences) {
+    var fns = Object.keys(occurrences);
+    fns.forEach(function(fn) {
+      if (occurrences[fn].size > 1) {
+        console.log(fn);
+        occurrences[fn].forEach(function(filename) {
+          console.log('\t' + filename);
+        });
+      }
+    });
+  }
+
   async.series([
     function(callback) {
       readDirectory(path, callback);
@@ -100,6 +112,7 @@ function namesake(path) {
     }
 
     var ocurrences = findOccurrences(_files);
+    printOccurrences(ocurrences);
 
   });
 }
