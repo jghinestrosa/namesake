@@ -1,0 +1,8 @@
+{
+  "name": "namesake",
+  "version": "0.1.0",
+  "description": "Find namesakes throughout multiple code files",
+  "main": "index.js",
+  "author": "Jorge García Hinestrosa",
+  "license": "MIT"
+}
