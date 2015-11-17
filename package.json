@@ -4,5 +4,8 @@
   "description": "Find namesakes throughout multiple code files",
   "main": "index.js",
   "author": "Jorge García Hinestrosa",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "async": "^1.5.0"
+  }
 }
